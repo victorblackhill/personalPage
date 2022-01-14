@@ -1,0 +1,33 @@
+
+<h1>This is the form</h1>
+<form action="/projects/add" method="post">
+
+<label for="name">Name</label>
+<input type="text" id="name" name="name">
+
+
+<label for="status">Status</label>
+<select name="status" id="status" name="name">
+    <option value="TODO">TODO</option>
+    <option value="WIP">WIP</option>
+    <option value="DONE">DONE</option>
+</select>
+
+<button>Add a new project</button>
+
+<h1>Find what you need</h1>
+
+<form action="search">
+<label for="search">Name</label>
+<input type="search" name="q" id="search">
+<button>Search</button>
+</form>
+
+<ul>
+{{#each searchedProject}}
+    
+<li>{{searchedProject.name}}</li>
+{{/each}}
+</ul>
+
+</form>

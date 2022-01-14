@@ -1,0 +1,5 @@
+<ul>
+    {{#each project}}
+        <li>{{this.name}} {{#if this.githubURL}} {{this.githubURL}} {{/if}}</li>
+    {{/each}}
+</ul>
